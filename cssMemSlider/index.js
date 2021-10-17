@@ -5,8 +5,7 @@ const slider = () => {
         sliderWrap = document.querySelector('.slider-wrap'),
         sliderContent = document.querySelector('.slider-content'),
         coursor = document.querySelector('.coursor'),
-        sliderTexts = document.querySelectorAll('.slider-text'),
-        sliderPoints = document.querySelector('.slider-points');
+        sliderTexts = document.querySelectorAll('.slider-text');
     let currentSlider = 0,
         currentText = 0,
         interval;
@@ -30,7 +29,6 @@ const slider = () => {
         nextSlide(point, currentSlider, 'point-active');
         nextSlide(sliderTexts, currentText, 'active-text');
     };
-
     const startSlide = () => {
         interval = setInterval(autoPlay, 3000);
     };
@@ -43,11 +41,9 @@ const slider = () => {
         coursor.style.top = event.pageY + "px";
         coursor.style.left = event.pageX + "px";
     };
-
     sliderWrap.addEventListener('click', (e) => {
         e.preventDefault();
         let target = e.target;
-        console.log(0);
         prevSlide(slider, currentSlider, 'slider-active');
         prevSlide(point, currentSlider, 'point-active');
         prevSlide(sliderTexts, currentText, 'active-text');
@@ -68,7 +64,6 @@ const slider = () => {
         nextSlide(slider, currentSlider, 'slider-active');
         nextSlide(point, currentSlider, 'point-active');
         nextSlide(sliderTexts, currentText, 'active-text');
-        
     });
     sliderContent.addEventListener('mouseover', (event) => {
         if (event.target.matches('.point-li') || event.target.matches('.point') || event.target.matches('.slider-points')) {
@@ -80,7 +75,7 @@ const slider = () => {
             startSlide();
         }
     });
-    
+    //здесь должна быть реализована функция изменения курсора при наведении
     // sliderContent.addEventListener('mousedown', (event) => {
     //     event.stopPropagation();
     //     console.log(3);
@@ -90,7 +85,6 @@ const slider = () => {
     //     console.log(4);
     //     coursor.style.opacity = 0;
     // });
-
     startSlide();
 };
 slider();
