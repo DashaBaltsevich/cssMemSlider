@@ -30,7 +30,7 @@ const slider = () => {
         nextSlide(sliderTexts, currentText, 'active-text');
     };
     const startSlide = () => {
-        interval = setInterval(autoPlay, 3000);
+        interval = setInterval(autoPlay, 300000);
     };
     const stopSlide = () => {
         clearInterval(interval);
