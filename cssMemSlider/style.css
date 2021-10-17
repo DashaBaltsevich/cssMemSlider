@@ -2,7 +2,6 @@ body {
     background-color: rgb(20, 19, 37);
     margin: 0;
 }
-
 .coursor {
     background-color:rgb(222, 184, 135);
     opacity: 0.6;
@@ -91,7 +90,6 @@ body {
     border-color: rgb(255, 255, 255);
     background-color: rgb(20, 19, 37);
 }
-
 @media (max-width: 530px) {
     .slider-content {
         flex-direction: column-reverse;
