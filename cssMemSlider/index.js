@@ -32,7 +32,7 @@ const slider = () => {
     };
 
     const startSlide = () => {
-        interval = setInterval(autoPlay, 4000);
+        interval = setInterval(autoPlay, 3000);
     };
     const stopSlide = () => {
         clearInterval(interval);
