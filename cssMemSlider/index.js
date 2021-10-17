@@ -48,9 +48,6 @@ const slider = () => {
         e.preventDefault();
         let target = e.target;
         console.log(0);
-        // if(!target.matches('.point-li') || target.matches('.point')) {
-        //     return;
-        // }
         prevSlide(slider, currentSlider, 'slider-active');
         prevSlide(point, currentSlider, 'point-active');
         prevSlide(sliderTexts, currentText, 'active-text');
